@@ -4,8 +4,6 @@ import ExpenseList from "./components/ExpenseList";
 import Form from "./components/Form";
 import ExpenseFilter from "./components/ExpenseFilter";
 
-export const categories = ["Groceries", "Utilities", "Entertainment"];
-
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [expenses, setExpenses] = useState([
@@ -23,7 +21,11 @@ function App() {
     <div className="app">
       <div className="header">Expense Tracker</div>
       <div className="mb-5">
-        <Form />
+        <Form
+          onSubmit={(expense) =>
+            setExpenses([...expenses, { ...expense, id: expenses.length + 1 }])
+          }
+        />
       </div>
       <div className="mb-3">
         <ExpenseFilter
