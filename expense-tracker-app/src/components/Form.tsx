@@ -1,5 +1,13 @@
-// import { FieldValues, useForm } from "react-hook-form";
-// import { z } from "zod";
+import { FieldValues, useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { categories } from "../App";
+
+// z.object({
+//   description: z.string().min(3).max(50),
+//   amount: z.number().min(0.01).max(100_000),
+//   category: z.enum(categories),
+// });
 
 const Form = () => {
   return (
@@ -21,7 +29,14 @@ const Form = () => {
           <label htmlFor="Category" className="form-label">
             Category
           </label>
-          <input id="category" type="text" className="form-control" />
+          <select id="category" className="form-select">
+            <option value=""></option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
         </div>
         <button className="btn btn-primary">Submit</button>
       </form>

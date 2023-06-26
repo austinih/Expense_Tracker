@@ -4,6 +4,8 @@ import ExpenseList from "./components/ExpenseList";
 import Form from "./components/Form";
 import ExpenseFilter from "./components/ExpenseFilter";
 
+export const categories = ["Groceries", "Utilities", "Entertainment"];
+
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [expenses, setExpenses] = useState([
@@ -20,7 +22,7 @@ function App() {
   return (
     <div className="app">
       <div className="header">Expense Tracker</div>
-      <div className="mb-3">
+      <div className="mb-5">
         <Form />
       </div>
       <div className="mb-3">
