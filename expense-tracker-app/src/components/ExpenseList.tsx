@@ -14,6 +14,7 @@ interface Props {
 }
 
 const ExpenseList = ({ expenses, onDelete }: Props) => {
+  // tutorial for printing table to pdf - "https://codedec.com/tutorials/how-to-print-table-data-into-pdf-file-using-reactjs/"
   const doc = new jsPDF();
   autoTable(doc, { html: "#data_table" });
 
