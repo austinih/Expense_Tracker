@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jspdf-autotable": "^3.5.29",
     "zod": "^3.21.4"
   }
 }

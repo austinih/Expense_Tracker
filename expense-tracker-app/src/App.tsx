@@ -7,10 +7,7 @@ import ExpenseFilter from "./components/ExpenseFilter";
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [expenses, setExpenses] = useState([
-    { id: 1, description: "aaa", amount: 10, category: "Utilities" },
-    { id: 2, description: "bbb", amount: 15, category: "Utilities" },
-    { id: 3, description: "ccc", amount: 5, category: "Groceries" },
-    { id: 4, description: "ddd", amount: 50, category: "Groceries" },
+    { id: 1, description: "Example", amount: 0, category: "Example" },
   ]);
 
   const visibleExpenses = selectedCategory
